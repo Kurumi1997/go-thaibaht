@@ -9,10 +9,15 @@ import (
 
 // ToText return the thai baht as text.
 // This will floor the decimal if the specified number of 2 decimal is exceeded.
-func ToText(num float64) string {
+func FloatToText(num float64) string {
 	numStr := fmt.Sprintf("%.2f", math.Floor(num*100)/100)
 	text := convertNumToText(numStr)
 	return text
+}
+
+func StringToText(numberStr string) string {
+	textThaiBaht := convertNumToText(numberStr)
+	return textThaiBaht
 }
 
 var digits = map[int]string{

@@ -5,7 +5,7 @@ go-thaibaht is a simple library for convert number to thai baht as text
 
 ## Installation
 ```bash
-go get github.com/artykaikub/go-thaibaht
+go get github.com/Kurumi1997/go-thaibaht
 ```
 
 ## Example
@@ -14,13 +14,17 @@ package main
 
 import (
 	"log"
-	gothaibaht "github.com/artykaikub/go-thaibaht"
+	gothaibaht "github.com/Kurumi1997/go-thaibaht"
 )
 
 func main() {
-	text := gothaibaht.ToText(123456789.99)
-	fmt.Print(text)
+	floatToText := gothaibaht.FloatToText(123456789.99)
+	fmt.Println(floatToText)
 	// output: หนึ่งร้อยยี่สิบสามล้านสี่แสนห้าหมื่นหกพันเจ็ดร้อยแปดสิบเก้าบาทเก้าสิบเก้าสตางค์
+
+	stringToText := gothaibaht.StringToText("123456789.99")
+	// output: หนึ่งร้อยยี่สิบสามล้านสี่แสนห้าหมื่นหกพันเจ็ดร้อยแปดสิบเก้าบาทเก้าสิบเก้าสตางค์
+	fmt.Println(stringToText)
 }
 ```
 
