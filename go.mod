@@ -1,4 +1,4 @@
-module github.com/Kurumi1997/go-thaibaht
+module github.com/Kurumichan666/go-thaibaht
 
 go 1.18
 
